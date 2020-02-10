@@ -1,0 +1,75 @@
+header{
+	background-image: linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)),
+			url('../img/casa.png');
+	background-size: cover;
+	background-position: center;
+	font-family: 'Baloo Tamma', coursive;
+	color: #fff;
+	padding: 300px;
+}
+.bheader{
+ color: #fff;
+}
+.bsection{
+	background-image: url(../img/familia.jpg);
+	padding: 100px;
+	background-position:center;
+	background-attachment: fixed;
+	color: #fff;
+}
+.bsectioncolor{
+	color: #fff;
+}
+body{
+	font-family: 'Oxygen', sans-serif;
+}
+h2{color:#44679f; }
+h3{color:#44679f; }
+.csection{
+	background-color:#44679f;
+	padding: 50px; 
+}
+.a{
+	padding: 25px;
+}
+footer{
+	background-color: #2d2e2e;
+	color: #fff;
+	padding-bottom: 50px;
+}
+.b{padding: 0}
+.c{
+	padding-right: 0;
+	padding-left:0;
+}
+.d{
+	padding: 50px;
+}
+.e{
+	font-size: 100px;
+}
+.f{
+	padding-bottom: 25px;
+}
+.g{
+	padding-right: 100px;
+	padding-left: 100px;
+}
+.h{
+	padding-top: 20px;
+}
+i{
+	color: #2d2e2e;
+}
+i:over {
+	color:#44679f; 
+}
+nav{
+	background-color:#2d2e2e;
+	color: grey;
+}
+.z{
+	text-decoration-style: underline;
+}
