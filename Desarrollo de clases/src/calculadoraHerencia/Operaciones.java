@@ -6,12 +6,16 @@ import operaciones.Division;
 import operaciones.Multiplicacion;
 import operaciones.Resta;
 import operaciones.Suma;
+//Clase padre Operaciones
+//Clases hijas, las que heredan, Division Suma resta....
+//¡¡¡¡¡El padre está llamando a las clases hijas!!!!!
+//Es decir, bucle de creación: Operacion > Resta > Operacion 
 
 public class Operaciones {
 	Scanner numero= new Scanner(System.in);
 	double operador1;
 	double operador2;	
-	double resultado;
+	static double resultado;
 	int operacion;
 	public double info(){
 		operador1=Double.parseDouble(JOptionPane.showInputDialog("Introduce el operador 1"));
@@ -19,27 +23,66 @@ public class Operaciones {
 		Icon icon = null;
 		int seleccion = JOptionPane.showOptionDialog(null, "Es necesario que seleccione una opcion", "Titulo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,icon, options, options[0]);
 		operador2=Double.parseDouble(JOptionPane.showInputDialog("Introduce el operador 2"));
+		switch (seleccion) 
+		{
+			case 0:
+				Suma p1=new Suma();
+				p1.suma(operador1, operador2);
+				break;
+			case 1:
+				Resta p2=new Resta();
+				p2.resta(operador1, operador2);
+				break;
+			case 2:
+				Multiplicacion p3=new Multiplicacion();
+				p3.multiplicacion(operador1, operador2);
+				break;
+			case 3:
+				Division p4=new Division();
+				p4.division(operador1, operador2,resultado);
+				break;
+			default:
+				break;
+		}
+		
+		return resultado;
+	}
+	public double info2() {
+		String[] options = {"Otra operacion", "Salir"};
+		Icon icon = null;
+		int seleccion = JOptionPane.showOptionDialog(null, "Es necesario que seleccione una opcion", "Titulo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,icon, options, options[0]);
 		switch (seleccion) {
 		case 0:
-			Suma p1=new Suma();
-			p1.suma(operador1, operador2);
-			break;
+			operador1=getResultado();
+			operador2=Double.parseDouble(JOptionPane.showInputDialog("Introduce el operador"));
+			switch (seleccion) {
+			case 0:
+				Suma p1=new Suma();
+				p1.suma(operador1, operador2);
+				break;
+			case 1:
+				Resta p2=new Resta();
+				p2.resta(operador1, operador2);
+				break;
+			case 2:
+				Multiplicacion p3=new Multiplicacion();
+				p3.multiplicacion(operador1, operador2);
+				break;
+			case 3:
+				Division p4=new Division();
+				p4.division(operador1, operador2,resultado);
+				break;
+			default:
+				break;
+			}
+			info2();
 		case 1:
-			Resta p2=new Resta();
-			p2.resta(operador1, operador2);
-			break;
-		case 2:
-			Multiplicacion p3=new Multiplicacion();
-			p3.multiplicacion(operador1, operador2);
-			break;
-		case 3:
-			Division p4=new Division();
-			p4.division(operador1, operador2,resultado);
+			System.out.println("final");
 			break;
 		default:
 			break;
 		}
-		
+		 
 		return resultado;
 	}
 

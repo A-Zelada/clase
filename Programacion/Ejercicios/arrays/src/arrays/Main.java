@@ -33,19 +33,19 @@ public class Main {
 //		System.out.println("el valor de Y es: "+y+" el valor de C[i]= "+C[i]);
 //		}
 	//-------Ejercicio2-------------------
-//		int[] D=new int[100];
-//		int a=1;
-//		for (int i = 0; i <D.length; i++) {
-//			D[i]=a+i;
-//			System.out.println(D[i]);
-//		}
-	//---------Ejercicio3*------------------
-//		int[] D=new int[100];
-//		int a=0;
-//		for (int i = D.length; i >= 0; i--) {
-//			D[i]=a+i;
-//			System.out.println(D[i]);
-//		}
+		/*
+		 * int[] D=new int[100]; int a=1; for (int i = 0; i <D.length; i++) { D[i]=a+i;
+		 * System.out.println(D[i]); }
+		 */
+	//---------Ejercicio3------------------
+		
+		  int[] D=new int[101]; 
+		  int a=0; 
+		  for (int i = D.length-1; i >= 0; i--) {
+			  D[i]=a+i; 
+			  System.out.println(D[i]); 
+			  }
+		 
 	//-----------Ejercicio4--------------	
 //		int[] D=new int[100];
 //		for (int i = 0; i < D.length; i++) {
@@ -128,7 +128,8 @@ public class Main {
 //		double division=0;
 //		for (int i = 0; i < D.length; i++) {
 //			System.out.println("Introduce un numero");
-//			D[i]=numero.nextInt();
+//			D[i]=
+;
 //		}
 //		for (int j = 0; j < D.length; j++) {
 //			suma=suma+D[j];
